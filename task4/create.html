@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Routine Planner - Create Routine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fitness Routine Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="create.html">Create Routine</a></li>
+                <li><a href="routines.html">My Routines</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Create a Routine</h2>
+            <form id="routine-form">
+                <input type="text" id="routine-name" placeholder="Routine Name" required>
+                <select id="exercise-type">
+                    <option value="Cardio">Cardio</option>
+                    <option value="Strength">Strength</option>
+                    <option value="Flexibility">Flexibility</option>
+                </select>
+                <label for="duration">Duration (min): <span id="duration-value">30</span></label>
+                <input type="range" id="duration" min="5" max="60" value="30">
+                <label for="rest">Rest (sec): <span id="rest-value">30</span></label>
+                <input type="range" id="rest" min="10" max="120" value="30">
+                <button type="button" onclick="addExercise()">Add Exercise</button>
+                <button type="submit">Save Routine</button>
+            </form>
+            <ul id="exercise-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Fitness Routine Planner</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
